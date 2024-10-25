@@ -1,8 +1,5 @@
 const formInfo = document.getElementById("form-Info");
 const guestInfo = document.querySelector(".guest-info");
-let counter = 0;
-
-let guests;
 
 async function handleSubmit(event) {
   event.preventDefault();
@@ -14,10 +11,26 @@ async function handleSubmit(event) {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(body),
   });
-  guests = await response.json();
+  const guests = await response.json();
 }
 
-form.addEventListener("submit", handleSubmit);
+formInfo.addEventListener("submit", handleSubmit);
 
-async function getGuest() {}
+async function getGuest() {
+  const response = await fetch("http://localhost:3000/guests");
+  const guests = await response.json();
+
+  for (let i = 0; i < guests.length; i++) {
+    const guestname = guests[i].guestname;
+    const address = guests[i].address;
+    const message = guests[i].message;
+
+    const newH3 = document.createElement("h3");
+
+    newH3.textContent = `${guestname}, ${address}, ${message}`;
+
+    guestInfo.appendChild(newH3);
+  }
+}
+
 getGuest();
