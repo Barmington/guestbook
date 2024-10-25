@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guest logbook</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script type="module" src="./script.js" defer></script>
+  </head>
+  <body>
+    <form id="form-Info" method="post">
+        <input type="text"  name="firstname" placeholder="firstname"/> <br>
+        <!-- <input type="text" name="lastname" placeholder="lastname"/><br> -->
+        <textarea type="text" id="addr" name="address" placeholder="address"></textarea>
+        <textarea type="text" id="msg" name="message" placeholder="Please drop a message"></textarea></br>  <!-- msg = body -->
+        <button>Submit</button>
+    </form> 
+    <div class="guest-info">
+        <h3>Guests information</h3>
+        <h4 id="title"></h4>
+        <h5 id="bd"></h5>
+    </div>
+  </body>
+</html>
