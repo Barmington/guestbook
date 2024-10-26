@@ -22,14 +22,19 @@ async function getGuest() {
 
   for (let i = 0; i < guests.length; i++) {
     const guestname = guests[i].guestname;
-    const address = guests[i].address;
-    const message = guests[i].message;
+    const comment = guests[i].comment;
 
     const newH3 = document.createElement("h3");
+    const newP = document.createElement("p");
 
-    newH3.textContent = `${guestname}, ${address}, ${message}`;
+    newH3.textContent = `${guestname}`;
+    newP.textContent = `${comment}`;
+    newP.style.border = "1px solid black";
+    newP.style.width = "350px";
+    newP.style.height = "130px";
 
     guestInfo.appendChild(newH3);
+    guestInfo.appendChild(newP);
   }
 }
 

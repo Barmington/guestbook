@@ -13,10 +13,10 @@ const db = new pg.Pool({ connectionString: process.env.DATABASE_URL });
 app.get("/", (request, response) => response.json("I am the root endpoint"));
 
 app.post("/guests", async function (request, response) {
-  const { guestname, address, message } = request.body;
+  const { guestname, comment } = request.body;
   const result = await db.query(
-    "INSERT INTO guests (guestname, address, message) VALUES ($1, $2, $3)",
-    [guestname, address, message]
+    "INSERT INTO guests (guestname, comment) VALUES ($1, $2)",
+    [guestname, comment]
   );
 
   response.json(result);

@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 textarea {
   width: 300px;
   height: 100px;
@@ -6,4 +12,48 @@ textarea {
 input {
   width: 142px;
   margin-right: 3px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  background-color: gainsboro;
+  height: 50px;
+  align-items: center;
+}
+.logo {
+  display: flex;
+  justify-content: space-around;
+  width: 140px;
+  align-items: center;
+}
+a {
+  text-decoration: none;
+}
+li:first-of-type a {
+  padding: 10px;
+  margin: 10px;
+}
+
+li {
+  list-style: none;
+}
+
+li:last-child a {
+  margin-right: 12px;
+}
+.viewers {
+  display: flex;
+}
+.viewers p {
+  margin-left: 80px;
+}
+.sect-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cover-page {
+  width: 70vw;
 }
