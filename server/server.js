@@ -28,4 +28,14 @@ app.get("/guests", async function (request, response) {
   response.json(guests);
 });
 
+app.delete("/guest/:id", (request, response) => {
+  const index = comment.findIndex(
+    (newP) => newP.id === parseInt(request.params.id)
+  );
+  if (index === -1) {
+    return response.status(404).json("message: post no found");
+  }
+  comment.splice(index, 1);
+});
+
 app.listen(3000, () => console.log("I am running on port 3000"));

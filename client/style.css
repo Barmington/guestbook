@@ -3,7 +3,13 @@
   padding: 0;
   margin: 0;
 }
-
+/* .sect-1 {
+  background-image: url("./assets/tech_revolution.webp");
+  background-position: center;
+  background-size: cover;
+  height: 80vh;
+  width: auto;
+} */
 textarea {
   width: 300px;
   height: 100px;
@@ -20,12 +26,23 @@ nav {
   background-color: gainsboro;
   height: 50px;
   align-items: center;
+  width: 100%;
 }
 .logo {
   display: flex;
   justify-content: space-around;
   width: 140px;
   align-items: center;
+}
+.guest-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+.content {
+  height: 450px;
+  width: 550px;
+  padding: 30px;
 }
 a {
   text-decoration: none;
@@ -42,18 +59,115 @@ li {
 li:last-child a {
   margin-right: 12px;
 }
-.viewers {
+.viewers,
+ol,
+.sect-2,
+.count {
   display: flex;
 }
-.viewers p {
-  margin-left: 80px;
+.viewers {
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
 }
 .sect-1 {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+.sect-2 {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 .cover-page {
-  width: 70vw;
+  width: 90vw;
+  height: 100vh;
+  display: flex;
+  /* border: 1px solid black; */
+  /* margin: 40px; */
+  /* justify-content: center;
+  align-items: center; */
+}
+/* .comment {
+  margin-bottom: 30px;
+} */
+.small {
+  padding: 20px 20px 20px 0;
+}
+.hide {
+  display: none;
+}
+.make-comment {
+  border: 2px solid black;
+  padding: 5px;
+  width: 150px;
+  border-radius: 5px;
+  margin-bottom: 12px;
+}
+
+.make-comment:hover {
+  background-color: black;
+  color: white;
+  font-weight: bolder;
+  font-family: monospace;
+  cursor: pointer;
+}
+.count {
+  justify-content: space-around;
+  width: 320px;
+}
+
+img {
+  width: 600px;
+  height: 430px;
+}
+
+.col {
+  width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  .col-1 {
+    width: 8.33%;
+  }
+  .col-2 {
+    width: 16.66%;
+  }
+  .col-3 {
+    width: 25%;
+  }
+  .col-4 {
+    width: 33.33%;
+  }
+  .col-5 {
+    width: 41.66%;
+  }
+  .col-6 {
+    width: 50%;
+  }
+  .col-7 {
+    width: 58.33%;
+  }
+  .col-8 {
+    width: 66.66%;
+  }
+  .col-9 {
+    width: 75%;
+  }
+  .col-10 {
+    width: 83.33%;
+  }
+  .col-11 {
+    width: 91.66%;
+  }
+  .col-12 {
+    width: 100%;
+  }
+  .page-one {
+    flex-direction: row;
+  }
 }
